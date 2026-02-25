@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LaTeX Equation Editor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Little LaTeX Equation Editor</h1>
+        <p>Type LaTeX and export to PNG or copy to clipboard.</p>
+      </header>
+
+      <section class="panel">
+        <label class="label" for="latex-input">LaTeX input</label>
+        <textarea
+          id="latex-input"
+          class="input"
+          rows="6"
+          spellcheck="false"
+        >\frac{d}{dx}x^2 = 2x</textarea>
+        <div class="actions-row">
+          <div class="actions">
+            <button id="copy-btn" class="btn">Copy image</button>
+            <button id="save-btn" class="btn">Save PNG</button>
+          </div>
+          <div class="controls">
+          <label class="control">
+            <span>Image height</span>
+            <select id="height-mode" class="select">
+                <option value="auto" selected>Auto (42px)</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+            <label class="control" id="height-input-group">
+            <span>Height (px)</span>
+            <input id="height-input" class="input-small" type="number" min="8" max="1024" value="64" />
+          </label>
+          </div>
+        </div>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel">
+        <div class="preview-header">
+          <span class="label">Preview</span>
+          <span id="error" class="error" aria-live="polite"></span>
+        </div>
+        <div id="preview" class="preview" role="img" aria-label="LaTeX preview">
+          <div id="render-target" class="render-target"></div>
+        </div>
+      </section>
+      <footer class="footer">
+        <span>Reference:</span>
+        <a href="https://github.com/viyaleta/little-latex" target="_blank" rel="noopener noreferrer">
+          github.com/viyaleta/little-latex
+        </a>
+        <span>· MIT License</span>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
