@@ -65,6 +65,12 @@ body {
   flex-wrap: wrap;
 }
 
+.clipboard-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #6b7488;
+}
+
 .actions-row {
   margin-top: 14px;
   display: flex;

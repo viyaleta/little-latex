@@ -10,6 +10,7 @@ const heightInputGroup = document.getElementById("height-input-group");
 const copyLatexBtn = document.getElementById("copy-latex-btn");
 const copyMathmlBtn = document.getElementById("copy-mathml-btn");
 const clearLatexBtn = document.getElementById("clear-latex-btn");
+const clipboardNoteEl = document.getElementById("clipboard-note");
 const equationLookupInput = document.getElementById("equation-lookup");
 const equationInsertBtn = document.getElementById("equation-insert");
 const equationList = document.getElementById("equation-list");
@@ -93,6 +94,29 @@ const loadEquationLibrary = async () => {
       true
     );
   }
+};
+
+const getClipboardSupportNote = () => {
+  const ua = navigator.userAgent || "";
+  const isDuckDuckGo = /DuckDuckGo/i.test(ua);
+  const isChrome = /Chrome|Chromium/i.test(ua) && !/Edg|OPR|Brave/i.test(ua);
+  const isEdge = /Edg/i.test(ua);
+  const isFirefox = /Firefox/i.test(ua);
+  const isSafari = /Safari/i.test(ua) && !/Chrome|Chromium|Edg|OPR|Brave/i.test(ua);
+
+  if (isDuckDuckGo) {
+    return "Clipboard copy may be blocked in DuckDuckGo. If it fails, use manual copy.";
+  }
+  if (isChrome || isEdge) {
+    return "Clipboard copy works in Chrome and Edge (secure context required).";
+  }
+  if (isFirefox) {
+    return "Clipboard copy works in Firefox (secure context required).";
+  }
+  if (isSafari) {
+    return "Clipboard copy may be restricted in Safari. If it fails, use manual copy.";
+  }
+  return "Clipboard copy works in most modern browsers (secure context required).";
 };
 
 const normalizeLatexValue = (value) => {
@@ -407,3 +431,7 @@ heightInput.disabled = true;
 heightInputGroup.classList.add("is-hidden");
 
 renderEquation();
+
+if (clipboardNoteEl) {
+  clipboardNoteEl.textContent = getClipboardSupportNote();
+}
