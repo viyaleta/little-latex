@@ -1,0 +1,628 @@
+[
+  {
+    "id": "quadratic-formula",
+    "names": ["quadratic formula", "quadratic equation formula"],
+    "latex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
+  },
+  {
+    "id": "pythagorean-theorem",
+    "names": ["pythagorean theorem", "pythagoras theorem"],
+    "latex": "a^2 + b^2 = c^2"
+  },
+  {
+    "id": "distance-formula-2d",
+    "names": ["distance formula", "distance between two points"],
+    "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}"
+  },
+  {
+    "id": "midpoint-formula",
+    "names": ["midpoint formula", "midpoint of a segment"],
+    "latex": "\\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)"
+  },
+  {
+    "id": "slope-formula",
+    "names": ["slope formula", "slope of a line"],
+    "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1}"
+  },
+  {
+    "id": "binomial-theorem",
+    "names": ["binomial theorem", "binomial expansion"],
+    "latex": "(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^{k}"
+  },
+  {
+    "id": "arithmetic-series-sum",
+    "names": ["arithmetic series sum", "sum of arithmetic series"],
+    "latex": "S_n = \\frac{n}{2}(a_1 + a_n)"
+  },
+  {
+    "id": "geometric-series-sum",
+    "names": ["geometric series sum", "sum of geometric series"],
+    "latex": "S_n = a_1 \\frac{1 - r^n}{1 - r}"
+  },
+  {
+    "id": "infinite-geometric-series",
+    "names": ["infinite geometric series", "infinite geometric sum"],
+    "latex": "S = \\frac{a_1}{1 - r}, \\quad |r| < 1"
+  },
+  {
+    "id": "euler-formula",
+    "names": ["euler formula", "euler's formula"],
+    "latex": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta"
+  },
+  {
+    "id": "euler-identity",
+    "names": ["euler identity", "euler's identity"],
+    "latex": "e^{i\\pi} + 1 = 0"
+  },
+  {
+    "id": "pythagorean-identity",
+    "names": ["pythagorean identity", "trig identity"],
+    "latex": "\\sin^2\\theta + \\cos^2\\theta = 1"
+  },
+  {
+    "id": "law-of-sines",
+    "names": ["law of sines", "sine rule"],
+    "latex": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}"
+  },
+  {
+    "id": "law-of-cosines",
+    "names": ["law of cosines", "cosine rule"],
+    "latex": "c^2 = a^2 + b^2 - 2ab\\cos C"
+  },
+  {
+    "id": "area-circle",
+    "names": ["area of a circle", "circle area"],
+    "latex": "A = \\pi r^2"
+  },
+  {
+    "id": "circumference-circle",
+    "names": ["circumference", "circle circumference"],
+    "latex": "C = 2\\pi r"
+  },
+  {
+    "id": "sphere-volume",
+    "names": ["volume of a sphere", "sphere volume"],
+    "latex": "V = \\frac{4}{3}\\pi r^3"
+  },
+  {
+    "id": "sphere-area",
+    "names": ["surface area of a sphere", "sphere surface area"],
+    "latex": "A = 4\\pi r^2"
+  },
+  {
+    "id": "cylinder-volume",
+    "names": ["volume of a cylinder", "cylinder volume"],
+    "latex": "V = \\pi r^2 h"
+  },
+  {
+    "id": "cone-volume",
+    "names": ["volume of a cone", "cone volume"],
+    "latex": "V = \\frac{1}{3}\\pi r^2 h"
+  },
+  {
+    "id": "gaussian-integral",
+    "names": ["gaussian integral", "normal integral"],
+    "latex": "\\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx = \\sqrt{\\pi}"
+  },
+  {
+    "id": "normal-distribution-pdf",
+    "names": ["normal distribution pdf", "gaussian pdf"],
+    "latex": "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}"
+  },
+  {
+    "id": "bayes-theorem",
+    "names": ["bayes theorem", "bayes' theorem", "bayes rule"],
+    "latex": "P(A\\mid B) = \\frac{P(B\\mid A)P(A)}{P(B)}"
+  },
+  {
+    "id": "fundamental-theorem-calculus",
+    "names": ["fundamental theorem of calculus", "ftc"],
+    "latex": "\\int_a^b f'(x) \\, dx = f(b) - f(a)"
+  },
+  {
+    "id": "derivative-definition",
+    "names": ["derivative definition", "definition of derivative"],
+    "latex": "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}"
+  },
+  {
+    "id": "newton-second-law",
+    "names": ["newton's second law", "newton second law"],
+    "latex": "\\vec{F} = m\\vec{a}"
+  },
+  {
+    "id": "newton-gravitation",
+    "names": ["newton's law of gravitation", "universal gravitation"],
+    "latex": "F = G\\frac{m_1 m_2}{r^2}"
+  },
+  {
+    "id": "coulomb-law",
+    "names": ["coulomb's law", "coulomb law"],
+    "latex": "F = k\\frac{q_1 q_2}{r^2}"
+  },
+  {
+    "id": "ohm-law",
+    "names": ["ohm's law", "ohm law"],
+    "latex": "V = IR"
+  },
+  {
+    "id": "electric-power",
+    "names": ["electric power", "power equation"],
+    "latex": "P = IV"
+  },
+  {
+    "id": "kinetic-energy",
+    "names": ["kinetic energy", "translational kinetic energy"],
+    "latex": "K = \\frac{1}{2}mv^2"
+  },
+  {
+    "id": "potential-energy-gravity",
+    "names": ["gravitational potential energy", "potential energy"],
+    "latex": "U = mgh"
+  },
+  {
+    "id": "work-definition",
+    "names": ["work definition", "work integral"],
+    "latex": "W = \\int \\vec{F} \\cdot d\\vec{r}"
+  },
+  {
+    "id": "momentum",
+    "names": ["momentum", "linear momentum"],
+    "latex": "\\vec{p} = m\\vec{v}"
+  },
+  {
+    "id": "impulse",
+    "names": ["impulse", "impulse momentum"],
+    "latex": "\\vec{J} = \\int_{t_1}^{t_2} \\vec{F} \\, dt"
+  },
+  {
+    "id": "hooke-law",
+    "names": ["hooke's law", "hooke law", "spring force"],
+    "latex": "F = -kx"
+  },
+  {
+    "id": "ideal-gas-law",
+    "names": ["ideal gas law", "ideal gas equation"],
+    "latex": "PV = nRT"
+  },
+  {
+    "id": "first-law-thermo",
+    "names": ["first law of thermodynamics", "energy conservation"],
+    "latex": "\\Delta U = Q - W"
+  },
+  {
+    "id": "bernoulli-equation",
+    "names": ["bernoulli equation", "bernoulli's equation"],
+    "latex": "P + \\frac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}"
+  },
+  {
+    "id": "continuity-equation",
+    "names": ["continuity equation", "mass continuity"],
+    "latex": "\\nabla \\cdot (\\rho \\vec{v}) + \\frac{\\partial \\rho}{\\partial t} = 0"
+  },
+  {
+    "id": "wave-equation",
+    "names": ["wave equation", "classical wave equation"],
+    "latex": "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u"
+  },
+  {
+    "id": "heat-equation",
+    "names": ["heat equation", "diffusion equation"],
+    "latex": "\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u"
+  },
+  {
+    "id": "schrodinger-equation",
+    "names": ["schrodinger equation", "schrodinger's equation"],
+    "latex": "i\\hbar \\frac{\\partial}{\\partial t} \\Psi = \\hat{H}\\Psi"
+  },
+  {
+    "id": "gauss-law-electric",
+    "names": ["gauss's law", "gauss law electric"],
+    "latex": "\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0}"
+  },
+  {
+    "id": "gauss-law-magnetic",
+    "names": ["gauss's law for magnetism", "gauss law magnetic"],
+    "latex": "\\nabla \\cdot \\vec{B} = 0"
+  },
+  {
+    "id": "faraday-law",
+    "names": ["faraday's law", "faraday law of induction"],
+    "latex": "\\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t}"
+  },
+  {
+    "id": "ampere-maxwell",
+    "names": ["ampere maxwell law", "ampere's law", "ampere law"],
+    "latex": "\\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t}"
+  },
+  {
+    "id": "lorentz-force",
+    "names": ["lorentz force", "lorentz force law"],
+    "latex": "\\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B})"
+  },
+  {
+    "id": "snell-law",
+    "names": ["snell's law", "snell law", "law of refraction"],
+    "latex": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2"
+  },
+  {
+    "id": "lens-equation",
+    "names": ["thin lens equation", "lens equation"],
+    "latex": "\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}"
+  },
+  {
+    "id": "de-broglie",
+    "names": ["de broglie wavelength", "de broglie relation"],
+    "latex": "\\lambda = \\frac{h}{p}"
+  },
+  {
+    "id": "planck-einstein",
+    "names": ["planck einstein relation", "photon energy"],
+    "latex": "E = h\\nu"
+  },
+  {
+    "id": "mass-energy",
+    "names": ["mass energy equivalence", "einstein mass energy"],
+    "latex": "E = mc^2"
+  },
+  {
+    "id": "lorentz-factor",
+    "names": ["lorentz factor", "gamma factor"],
+    "latex": "\\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}"
+  },
+  {
+    "id": "escape-velocity",
+    "names": ["escape velocity", "escape speed"],
+    "latex": "v_e = \\sqrt{\\frac{2GM}{r}}"
+  },
+  {
+    "id": "orbital-velocity",
+    "names": ["orbital velocity", "circular orbit speed"],
+    "latex": "v = \\sqrt{\\frac{GM}{r}}"
+  },
+  {
+    "id": "kepler-third-law",
+    "names": ["kepler's third law", "kepler third law"],
+    "latex": "T^2 = \\frac{4\\pi^2}{GM} a^3"
+  },
+  {
+    "id": "navier-stokes",
+    "names": ["navier stokes", "navier stokes equation"],
+    "latex": "\\rho\\left(\\frac{\\partial \\vec{v}}{\\partial t} + \\vec{v} \\cdot \\nabla \\vec{v}\\right) = -\\nabla p + \\mu \\nabla^2 \\vec{v} + \\rho \\vec{g}"
+  },
+  {
+    "id": "mean-population",
+    "names": ["population mean", "expected value of discrete"],
+    "latex": "\\mu = \\sum_{i=1}^{n} x_i p_i"
+  },
+  {
+    "id": "mean-sample",
+    "names": ["sample mean", "arithmetic mean"],
+    "latex": "\\bar{x} = \\frac{1}{n} \\sum_{i=1}^{n} x_i"
+  },
+  {
+    "id": "variance-population",
+    "names": ["population variance", "variance definition"],
+    "latex": "\\sigma^2 = \\frac{1}{n} \\sum_{i=1}^{n} (x_i - \\mu)^2"
+  },
+  {
+    "id": "variance-sample",
+    "names": ["sample variance", "unbiased variance"],
+    "latex": "s^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (x_i - \\bar{x})^2"
+  },
+  {
+    "id": "standard-deviation",
+    "names": ["standard deviation", "population standard deviation"],
+    "latex": "\\sigma = \\sqrt{\\sigma^2}"
+  },
+  {
+    "id": "covariance",
+    "names": ["covariance", "sample covariance"],
+    "latex": "\\operatorname{cov}(X,Y) = \\frac{1}{n-1} \\sum_{i=1}^{n} (x_i - \\bar{x})(y_i - \\bar{y})"
+  },
+  {
+    "id": "correlation-coefficient",
+    "names": ["correlation coefficient", "pearson correlation", "pearson r"],
+    "latex": "r = \\frac{\\operatorname{cov}(X,Y)}{s_X s_Y}"
+  },
+  {
+    "id": "z-score",
+    "names": ["z score", "standard score"],
+    "latex": "z = \\frac{x - \\mu}{\\sigma}"
+  },
+  {
+    "id": "standard-error-mean",
+    "names": ["standard error", "standard error of the mean", "sem"],
+    "latex": "SE = \\frac{s}{\\sqrt{n}}"
+  },
+  {
+    "id": "slope-intercept-form",
+    "names": ["slope intercept form", "slope-intercept form", "line equation slope intercept"],
+    "latex": "y = mx + b"
+  },
+  {
+    "id": "point-slope-form",
+    "names": ["point slope form", "point-slope form", "line equation point slope"],
+    "latex": "y - y_1 = m(x - x_1)"
+  },
+  {
+    "id": "standard-form-line",
+    "names": ["standard form of a line", "line standard form"],
+    "latex": "Ax + By = C"
+  },
+  {
+    "id": "quadratic-equation-standard-form",
+    "names": ["quadratic equation", "quadratic standard form"],
+    "latex": "ax^2 + bx + c = 0"
+  },
+  {
+    "id": "vertex-form-parabola",
+    "names": ["vertex form", "vertex form of parabola", "parabola vertex form"],
+    "latex": "y = a(x - h)^2 + k"
+  },
+  {
+    "id": "exponent-product-rule",
+    "names": ["exponent product rule", "product rule for exponents"],
+    "latex": "a^m a^n = a^{m+n}"
+  },
+  {
+    "id": "exponent-power-rule",
+    "names": ["power of a power rule", "exponent power rule"],
+    "latex": "\\left(a^m\\right)^n = a^{mn}"
+  },
+  {
+    "id": "log-product-rule",
+    "names": ["log product rule", "logarithm product rule"],
+    "latex": "\\log_b(xy) = \\log_b x + \\log_b y"
+  },
+  {
+    "id": "log-quotient-rule",
+    "names": ["log quotient rule", "logarithm quotient rule"],
+    "latex": "\\log_b\\!\\left(\\frac{x}{y}\\right) = \\log_b x - \\log_b y"
+  },
+  {
+    "id": "log-power-rule",
+    "names": ["log power rule", "logarithm power rule"],
+    "latex": "\\log_b(x^k) = k\\log_b x"
+  },
+  {
+    "id": "change-of-base-log",
+    "names": ["change of base formula", "log change of base"],
+    "latex": "\\log_b x = \\frac{\\log_a x}{\\log_a b}"
+  },
+  {
+    "id": "tangent-identity",
+    "names": ["tangent identity", "tan identity"],
+    "latex": "\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}"
+  },
+  {
+    "id": "sine-angle-addition",
+    "names": ["sine addition formula", "angle addition formula for sine"],
+    "latex": "\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta"
+  },
+  {
+    "id": "cosine-angle-addition",
+    "names": ["cosine addition formula", "angle addition formula for cosine"],
+    "latex": "\\cos(\\alpha + \\beta) = \\cos\\alpha\\cos\\beta - \\sin\\alpha\\sin\\beta"
+  },
+  {
+    "id": "sine-double-angle",
+    "names": ["sine double angle", "double angle formula for sine"],
+    "latex": "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta"
+  },
+  {
+    "id": "cosine-double-angle",
+    "names": ["cosine double angle", "double angle formula for cosine"],
+    "latex": "\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta"
+  },
+  {
+    "id": "arc-length-radians",
+    "names": ["arc length formula", "arc length in radians"],
+    "latex": "s = r\\theta"
+  },
+  {
+    "id": "sector-area-radians",
+    "names": ["sector area formula", "sector area in radians"],
+    "latex": "A = \\frac{1}{2}r^2\\theta"
+  },
+  {
+    "id": "derivative-power-rule",
+    "names": ["power rule derivative", "power rule"],
+    "latex": "\\frac{d}{dx}x^n = nx^{n-1}"
+  },
+  {
+    "id": "derivative-product-rule",
+    "names": ["product rule derivative", "product rule"],
+    "latex": "\\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)"
+  },
+  {
+    "id": "derivative-quotient-rule",
+    "names": ["quotient rule derivative", "quotient rule"],
+    "latex": "\\frac{d}{dx}\\left(\\frac{f(x)}{g(x)}\\right) = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}"
+  },
+  {
+    "id": "derivative-chain-rule",
+    "names": ["chain rule derivative", "chain rule"],
+    "latex": "\\frac{d}{dx}f(g(x)) = f'(g(x))g'(x)"
+  },
+  {
+    "id": "power-rule-antiderivative",
+    "names": ["power rule integral", "power rule antiderivative"],
+    "latex": "\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C, \\quad n \\ne -1"
+  },
+  {
+    "id": "integration-by-parts",
+    "names": ["integration by parts", "ibp formula"],
+    "latex": "\\int u\\,dv = uv - \\int v\\,du"
+  },
+  {
+    "id": "u-substitution",
+    "names": ["u substitution", "substitution rule for integrals"],
+    "latex": "\\int f(g(x))g'(x)\\,dx = \\int f(u)\\,du \\quad \\text{where } u=g(x)"
+  },
+  {
+    "id": "taylor-series",
+    "names": ["taylor series", "taylor expansion"],
+    "latex": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n"
+  },
+  {
+    "id": "maclaurin-series",
+    "names": ["maclaurin series", "maclaurin expansion"],
+    "latex": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(0)}{n!}x^n"
+  },
+  {
+    "id": "linear-system-matrix-form",
+    "names": ["matrix form of linear system", "ax equals b", "linear system matrix equation"],
+    "latex": "A\\mathbf{x} = \\mathbf{b}"
+  },
+  {
+    "id": "identity-matrix-property",
+    "names": ["identity matrix property", "matrix identity property"],
+    "latex": "AI = IA = A"
+  },
+  {
+    "id": "inverse-matrix-property",
+    "names": ["inverse matrix property", "matrix inverse definition"],
+    "latex": "AA^{-1} = A^{-1}A = I"
+  },
+  {
+    "id": "determinant-2x2",
+    "names": ["determinant of 2x2 matrix", "2x2 determinant"],
+    "latex": "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc"
+  },
+  {
+    "id": "dot-product-sum",
+    "names": ["dot product", "inner product coordinate form"],
+    "latex": "\\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^{n} a_i b_i"
+  },
+  {
+    "id": "dot-product-angle",
+    "names": ["dot product angle form", "inner product geometric form"],
+    "latex": "\\mathbf{a} \\cdot \\mathbf{b} = \\|\\mathbf{a}\\|\\,\\|\\mathbf{b}\\|\\cos\\theta"
+  },
+  {
+    "id": "conditional-probability",
+    "names": ["conditional probability", "definition of conditional probability"],
+    "latex": "P(A\\mid B) = \\frac{P(A \\cap B)}{P(B)}"
+  },
+  {
+    "id": "law-of-total-probability",
+    "names": ["law of total probability", "total probability theorem"],
+    "latex": "P(B) = \\sum_{i=1}^{n} P(B\\mid A_i)P(A_i)"
+  },
+  {
+    "id": "expected-value-continuous",
+    "names": ["expected value continuous", "mean of continuous random variable"],
+    "latex": "E[X] = \\int_{-\\infty}^{\\infty} x f_X(x)\\,dx"
+  },
+  {
+    "id": "variance-identity",
+    "names": ["variance identity", "computational formula for variance"],
+    "latex": "\\operatorname{Var}(X) = E[X^2] - (E[X])^2"
+  },
+  {
+    "id": "binomial-pmf",
+    "names": ["binomial pmf", "binomial distribution formula"],
+    "latex": "P(X=k) = \\binom{n}{k} p^k (1-p)^{n-k}"
+  },
+  {
+    "id": "poisson-pmf",
+    "names": ["poisson pmf", "poisson distribution formula"],
+    "latex": "P(X=k) = e^{-\\lambda}\\frac{\\lambda^k}{k!}"
+  },
+  {
+    "id": "normal-cdf-standardization",
+    "names": ["normal cdf standardization", "standardizing normal variable"],
+    "latex": "P(X \\le x) = \\Phi\\!\\left(\\frac{x-\\mu}{\\sigma}\\right)"
+  },
+  {
+    "id": "central-limit-theorem-mean",
+    "names": ["central limit theorem", "clt for sample mean"],
+    "latex": "\\bar{X} \\approx N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right) \\quad \\text{for large } n"
+  },
+  {
+    "id": "confidence-interval-mean-z",
+    "names": ["confidence interval for mean", "z confidence interval mean"],
+    "latex": "\\bar{x} \\pm z_{\\alpha/2}\\frac{\\sigma}{\\sqrt{n}}"
+  },
+  {
+    "id": "one-sample-t-statistic",
+    "names": ["one sample t statistic", "t statistic one sample"],
+    "latex": "t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}"
+  },
+  {
+    "id": "two-sample-t-statistic-welch",
+    "names": ["two sample t statistic", "welch t statistic", "two sample t test statistic"],
+    "latex": "t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}"
+  },
+  {
+    "id": "kinematics-velocity",
+    "names": ["kinematic equation velocity", "constant acceleration velocity"],
+    "latex": "v = v_0 + at"
+  },
+  {
+    "id": "kinematics-position",
+    "names": ["kinematic equation position", "constant acceleration position"],
+    "latex": "x = x_0 + v_0 t + \\frac{1}{2}at^2"
+  },
+  {
+    "id": "kinematics-velocity-position",
+    "names": ["kinematic equation no time", "velocity position kinematics"],
+    "latex": "v^2 = v_0^2 + 2a(x - x_0)"
+  },
+  {
+    "id": "centripetal-acceleration",
+    "names": ["centripetal acceleration", "radial acceleration magnitude"],
+    "latex": "a_c = \\frac{v^2}{r}"
+  },
+  {
+    "id": "centripetal-force",
+    "names": ["centripetal force", "radial force magnitude"],
+    "latex": "F_c = \\frac{mv^2}{r}"
+  },
+  {
+    "id": "torque",
+    "names": ["torque", "moment of force"],
+    "latex": "\\boldsymbol{\\tau} = \\mathbf{r} \\times \\mathbf{F}"
+  },
+  {
+    "id": "angular-momentum",
+    "names": ["angular momentum", "orbital angular momentum"],
+    "latex": "\\mathbf{L} = \\mathbf{r} \\times \\mathbf{p}"
+  },
+  {
+    "id": "rotational-kinetic-energy",
+    "names": ["rotational kinetic energy", "kinetic energy rotation"],
+    "latex": "K = \\frac{1}{2}I\\omega^2"
+  },
+  {
+    "id": "capacitance-definition",
+    "names": ["capacitance", "capacitance definition"],
+    "latex": "C = \\frac{Q}{V}"
+  },
+  {
+    "id": "capacitor-energy",
+    "names": ["energy in capacitor", "capacitor energy"],
+    "latex": "U = \\frac{1}{2}CV^2"
+  },
+  {
+    "id": "resistance-series",
+    "names": ["resistors in series", "equivalent resistance series"],
+    "latex": "R_{\\mathrm{eq}} = \\sum_{i=1}^{n} R_i"
+  },
+  {
+    "id": "resistance-parallel",
+    "names": ["resistors in parallel", "equivalent resistance parallel"],
+    "latex": "\\frac{1}{R_{\\mathrm{eq}}} = \\sum_{i=1}^{n} \\frac{1}{R_i}"
+  },
+  {
+    "id": "rc-charging-voltage",
+    "names": ["rc charging equation", "capacitor charging voltage"],
+    "latex": "V_C(t) = V\\left(1 - e^{-t/(RC)}\\right)"
+  },
+  {
+    "id": "rc-discharging-voltage",
+    "names": ["rc discharging equation", "capacitor discharging voltage"],
+    "latex": "V_C(t) = V_0 e^{-t/(RC)}"
+  }
+    
+]

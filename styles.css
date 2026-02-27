@@ -51,12 +51,108 @@ body {
   resize: vertical;
 }
 
+#latex-input {
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.input-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .actions-row {
   margin-top: 14px;
   display: flex;
   gap: 18px;
   align-items: flex-end;
   flex-wrap: wrap;
+}
+
+.lookup {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.helpers {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.helpers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.helper-note {
+  font-size: 12px;
+  color: #6b7488;
+}
+
+.helper-group {
+  display: grid;
+  gap: 8px;
+}
+
+.helper-group-title {
+  font-size: 12px;
+  color: #6b7488;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.helper-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-ghost {
+  background: #f7f9fc;
+  color: #2a3348;
+}
+
+.btn-ghost:hover {
+  background: #eef2f8;
+}
+
+.btn-ghost.helper-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.lookup-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lookup-input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.lookup-status {
+  margin: 0;
+  min-height: 18px;
+  font-size: 12px;
+  color: #475063;
+}
+
+.lookup-status.is-error {
+  color: #c62525;
 }
 
 .actions {
@@ -100,14 +196,14 @@ body {
   border-radius: 10px;
   padding: 10px 16px;
   font-weight: 600;
-  background: #3056ff;
-  color: #ffffff;
+  background: #eef2f8;
+  color: #2a3348;
   cursor: pointer;
   transition: transform 0.1s ease, background 0.2s ease;
 }
 
 .btn:hover {
-  background: #2445d7;
+  background: #e3e9f2;
 }
 
 .btn:active {

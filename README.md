@@ -3,6 +3,8 @@
 A tiny browser-based LaTeX equation editor with live preview, PNG export, and
 clipboard image copy.
 
+Made with help of Claude. 
+
 ## Features
 
 - Live KaTeX rendering.
@@ -21,6 +23,15 @@ python3 -m http.server
 ```
 
 Then visit `http://localhost:8000`.
+
+## Equation lookup
+
+The editor ships with a built-in lookup of popular math and physics equations.
+Type a common name (for example, "quadratic formula") in the lookup field to
+insert its LaTeX. The list is curated but not exhaustive, so feel free to add
+more entries in `equations.json`. The lookup list is loaded via `fetch`, so run
+the app through a local server (see instructions above) rather than using a
+`file://` URL.
 
 ## Publish with GitHub Pages
 

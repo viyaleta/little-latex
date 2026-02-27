@@ -25,27 +25,114 @@
           class="input"
           rows="6"
           spellcheck="false"
+          wrap="soft"
         >\frac{d}{dx}x^2 = 2x</textarea>
-        <div class="actions-row">
-          <div class="actions">
-            <button id="copy-btn" class="btn">Copy image</button>
-            <button id="save-btn" class="btn">Save PNG</button>
+        <div class="input-actions">
+          <button id="clear-latex-btn" class="btn btn-ghost" type="button">Clear</button>
+          <button id="lookup-toggle-btn" class="btn" type="button">
+            Show equation lookup
+          </button>
+          <button id="helpers-toggle-btn" class="btn" type="button">
+            Show LaTeX helpers
+          </button>
+          <button id="copy-latex-btn" class="btn btn-ghost" type="button">Copy LaTeX</button>
+          <button id="copy-mathml-btn" class="btn btn-ghost" type="button">Copy MathML</button>
+        </div>
+        <div class="lookup is-hidden" id="lookup-panel">
+          <label class="label" for="equation-lookup">Equation lookup</label>
+          <div class="lookup-row">
+            <input
+              id="equation-lookup"
+              class="input lookup-input"
+              list="equation-list"
+              placeholder="e.g., quadratic formula"
+              autocomplete="off"
+            />
+            <button id="equation-insert" class="btn" type="button">Insert</button>
           </div>
-          <div class="controls">
-          <label class="control">
-            <span>Image height</span>
-            <select id="height-mode" class="select">
-                <option value="auto" selected>Auto (42px)</option>
-              <option value="custom">Custom</option>
-            </select>
-          </label>
-            <label class="control" id="height-input-group">
-            <span>Height (px)</span>
-            <input id="height-input" class="input-small" type="number" min="8" max="1024" value="64" />
-          </label>
+          <datalist id="equation-list"></datalist>
+          <p id="lookup-status" class="lookup-status" aria-live="polite"></p>
+        </div>
+        <div class="helpers is-hidden" id="helpers-panel">
+          <div class="helpers-header">
+            <span class="label">LaTeX helpers</span>
+            <span class="helper-note">Click to insert at cursor.</span>
+          </div>
+          <div class="helper-group">
+            <span class="helper-group-title">Structures</span>
+            <div class="helper-buttons">
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\frac{[[sel]]}{[[cur]]}">a/b</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\tfrac{[[sel]]}{[[cur]]}">tfrac</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\sqrt{[[sel]][[cur]]}">√</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\sqrt[[[cur]]]{[[sel]]}">ⁿ√</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="^{[[cur]]}">x^</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="_{[[cur]]}">x_</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\sum_{i=1}^{n} [[cur]]">∑</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\prod_{i=1}^{n} [[cur]]">∏</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\int_{a}^{b} [[cur]]">∫</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\iint_{A} [[cur]]">∬</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\iiint_{V} [[cur]]">∭</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\oint_{C} [[cur]]">∮</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\lim_{x \\to 0} [[cur]]">lim</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\frac{d}{dx} [[cur]]">d/dx</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\frac{\\partial}{\\partial x} [[cur]]">∂/∂x</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\frac{\\partial^2}{\\partial x^2} [[cur]]">∂²/∂x²</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\\\\\\\[[nl]][[cur]]">line break</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\nabla">∇</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\nabla^2">∇²</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\nabla \\cdot [[cur]]">∇⋅</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\nabla \\times [[cur]]">∇×</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\left( [[sel]][[cur]] \\right)">()</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\left[ [[sel]][[cur]] \\right]">[]</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\left\\{ [[sel]][[cur]] \\right\\}">{}</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\left\\langle [[sel]][[cur]] \\right\\rangle">⟨⟩</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\left| [[sel]][[cur]] \\right|">| |</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\left\\| [[sel]][[cur]] \\right\\|">|| ||</button>
+            </div>
+          </div>
+          <div class="helper-group">
+            <span class="helper-group-title">Symbols</span>
+            <div class="helper-buttons">
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\pm">±</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\mp">∓</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\times">×</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\div">÷</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\cdot">⋅</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\ast">∗</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\circ">∘</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\le">≤</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\ge">≥</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\ll">≪</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\gg">≫</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\neq">≠</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\approx">≈</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\equiv">≡</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\propto">∝</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\infty">∞</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\pi">π</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\theta">θ</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\alpha">α</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\beta">β</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\gamma">γ</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\delta">δ</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\mu">μ</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\sigma">σ</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\phi">ϕ</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\omega">ω</button>
+            </div>
+          </div>
+          <div class="helper-group">
+            <span class="helper-group-title">Arrows</span>
+            <div class="helper-buttons">
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\to">→</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\leftarrow">←</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\leftrightarrow">↔</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\Rightarrow">⇒</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\Leftarrow">⇐</button>
+              <button class="btn btn-ghost helper-btn" type="button" data-template="\\Leftrightarrow">⇔</button>
+            </div>
           </div>
         </div>
-        <p id="status" class="status" aria-live="polite"></p>
       </section>
 
       <section class="panel">
@@ -56,6 +143,26 @@
         <div id="preview" class="preview" role="img" aria-label="LaTeX preview">
           <div id="render-target" class="render-target"></div>
         </div>
+        <div class="actions-row">
+          <div class="actions">
+            <button id="copy-btn" class="btn">Copy image</button>
+            <button id="save-btn" class="btn">Save PNG</button>
+          </div>
+          <div class="controls">
+          <label class="control">
+            <span>Image height</span>
+            <select id="height-mode" class="select">
+                <option value="auto" selected>Auto (64px)</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+            <label class="control" id="height-input-group">
+            <span>Height (px)</span>
+            <input id="height-input" class="input-small" type="number" min="8" max="1024" value="64" />
+          </label>
+          </div>
+        </div>
+        <p id="status" class="status" aria-live="polite"></p>
       </section>
       <footer class="footer">
         <span>Reference:</span>
